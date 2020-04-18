@@ -15,6 +15,12 @@
         <!-- Bootstrap core CSS -->
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 
+        <!-- Bootstrap for Social media icons  -->
+        <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+
+        <!-- Local CSS -->
+        <link rel="stylesheet" href="{% static 'css/master.css' %}">
+
     </head>
 
     <body>
@@ -29,7 +35,7 @@
                     <ul class="navbar-nav ml-auto">
                         <li class="nav-item"><a class="nav-link" href="https://github.com/sarveshggn">Github</a></li>
                         <li class="nav-item"><a class="nav-link" href="https://www.linkedin.com/in/sarvesh-joshi/">LinkedIn</a></li>
-                        <li class="nav-item"><a class="nav-link" href="{% static 'B.Tech(IT)_Sarvesh Joshi.pdf' %}">Resume</a></li>
+                        <li class="nav-item"><a class="nav-link" href="{% static 'B.Tech(IT)_Sarvesh Joshi_Site_Added.pdf' %}">Resume</a></li>
                         <li class="nav-item"><a class="nav-link active" href="{% url 'allblogs' %}">Blog</a></li>
                     </ul>
                 </div>
@@ -55,6 +61,30 @@
             <div class="container text-center">
                 <p>© Sarvesh Joshi {% now "Y" %}</p>
             </div>
+
+            <div class="social" style="float: right; padding-right: 15%;"> 
+                <div class="websure-social minimal">
+                    <div class="websure-social-inner">
+                        <div class="social-img-wrp websure-socialink prk_bordered websure-linkedin">
+                            <a href="https://www.linkedin.com/in/sarvesh-joshi/" target="_blank">
+                            <span class="websure-linkedin fa fa-linkedin"></span>
+                            <span class="bg-shifter"><i class="fa fa-linkedin"></i></span>
+                            </a>
+                        </div>
+                        <div class="social-img-wrp websure-socialink prk_bordered websure-github">
+                            <a href="https://github.com/sarveshggn" target="_blank">
+                            <span class="websure-facebook fa fa-github"></span>
+                            <span class="bg-shifter"><i class="fa fa-github"></i></span>
+                            </a>
+                        </div>
+                        <div class="social-img-wrp websure-socialink prk_bordered websure-instagram">
+                            <a href="https://www.instagram.com/_sarveshjoshi__/" target="_blank">
+                            <span class="websure-instagram fa fa-instagram"></span>
+                            <span class="bg-shifter"><i class="fa fa-instagram"></i></span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
             <!-- <div class="container text-right">
                 <p>Time: {% now "h:m:s" %}</p>
             </div> -->
