@@ -1,7 +1,44 @@
-/* CSS for Box
-.flex-box-top{
-    box-shadow: 0px 10px 50px rgba(0, 0, 0, 0.7);
+/* .jumbotron {
+    background-image: url(https://images.unsplash.com/photo-1547623641-d2c56c03e2a7?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1868&q=80);
+    background-size: cover;
+}
+
+.album {
+    background-image: url(https://images.unsplash.com/photo-1508615039623-a25605d2b022?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80);
+    background-size: cover;
+}
+
+main {
+    background-image: url(https://images.unsplash.com/photo-1547623641-d2c56c03e2a7?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1868&q=80);
+    background-size: cover;
 } */
+
+/* .jumbotron {
+    background-image: url(https://images.unsplash.com/photo-1432821596592-e2c18b78144f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80);
+    background-size: cover;
+} */
+
+body {
+    background-color: #212529;
+    /* font-family: 'Montserrat', sans-serif; */
+}
+
+main {
+    background-color: #fff;
+}
+/* 
+h1 h2 h3 h4 h5 h6 {
+    font-family: 'Roboto', sans-serif;
+} */
+
+/* CSS for My Project Boxes */
+.flex-box-top {
+    transition: transform 1.2s;
+}
+
+.flex-box-top:hover {
+    transform: scale(1.1);
+}
 
 /* JS for typewrite effect */
 
@@ -135,3 +172,6 @@
       left:-1px
   }
 
+/* footer {
+    text-decoration-color: #f;
+} */

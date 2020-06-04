@@ -18,6 +18,9 @@
         <!-- Bootstrap for Social media icons  -->
         <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
 
+        <!-- Google Fonts -->
+        <!-- <link href="https://fonts.googleapis.com/css2?family=Roboto&family=Montserrat&display=swap" rel="stylesheet"> -->
+
         <!-- Local CSS -->
         <link rel="stylesheet" href="{% static 'css/master.css' %}">
 
@@ -66,7 +69,7 @@
                         {% for job in jobs.all reversed %}
 
                             <div class="col-md-4">
-                                <div class="card mb-4 box-shadow">
+                                <div class="card mb-4 flex-box-top">
                                     <img class="card-img-top" src="{{ job.image.url }}" />
                                     <div class="card-body">
                                         <p class="card-text">{{ job.summary }}</p>
@@ -83,10 +86,10 @@
 
         <footer class="text-muted">
             <div class="container text-center">
-                <p>© Sarvesh Joshi {% now "Y" %}</p>
+                <p style="color: #fff;">© Sarvesh Joshi {% now "Y" %}</p>
             </div>
 
-            <div class="social" style="float: right; padding-right: 15%;"> 
+            <div class="social" style="float: right; padding-right: 46%;"> 
                 <div class="websure-social minimal">
                     <div class="websure-social-inner">
                         <div class="social-img-wrp websure-socialink prk_bordered websure-linkedin">
@@ -113,6 +116,7 @@
                 <p>Time: {% now "h:m:s" %}</p>
             </div> -->
         </footer>
+        
 
         <!-- Bootstrap core JavaScript
         ================================================== -->
