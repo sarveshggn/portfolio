@@ -15,4 +15,4 @@ class Blog(models.Model):
         return self.pub_date.strftime('%d %b %Y')
 
     def summary(self):
-        return self.body[:100]
+        return self.body[:100] + " [...]"
