@@ -7,7 +7,7 @@
         <meta name="description" content="">
         <meta name="author" content="">
         <link rel="icon" href="/docs/4.0/assets/img/favicons/favicon.ico">
-
+        <!-- <link rel="shortcut icon" href="/favicon_sj_mono.ico" /> -->
         <title>Sarvesh Joshi</title>
 
         <link rel="canonical" href="https://getbootstrap.com/docs/4.0/examples/album/">
@@ -31,6 +31,10 @@
 
         <header>
             <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+                <!-- <a class="navbar-brand" href="{% url 'home' %}">
+                    <img src="{% static 'sj-monogram.png' %}" width="30" height="30" class="d-inline-block align-top" alt="">
+                    Sarvesh Joshi
+                </a> -->
                 <a class="navbar-brand" href="{% url 'home' %}">Sarvesh Joshi</a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -81,6 +85,9 @@
                                     <img class="card-img-top" src="{{ job.image.url }}" />
                                     <div class="card-body">
                                         <p class="card-text">{{ job.summary }}</p>
+                                        <div class="text-center">
+                                        <a href="{{ job.github_link }}" class="btn btn-dark"><i class="fa fa-github"></i> GitHub</a>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
