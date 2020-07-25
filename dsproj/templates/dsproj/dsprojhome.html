@@ -1,0 +1,143 @@
+<!doctype html>
+<html lang="en">
+{% load staticfiles %}
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <meta name="description" content="">
+        <meta name="author" content="">
+        <link rel="icon" href="/docs/4.0/assets/img/favicons/favicon.ico">
+
+        <title>Sarvesh Joshi</title>
+
+        <link rel="canonical" href="https://getbootstrap.com/docs/4.0/examples/album/">
+
+        <!-- Bootstrap core CSS -->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+        <!-- Bootstrap for Social media icons  -->
+        <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+
+        <!-- Google Fonts -->
+        <!-- <link href="https://fonts.googleapis.com/css2?family=Roboto&family=Montserrat&display=swap" rel="stylesheet"> -->
+
+        <!-- Local CSS -->
+        <link rel="stylesheet" href="{% static 'css/master.css' %}">
+
+        
+    </head>
+
+    <body>
+
+        <header>
+            <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+                <a class="navbar-brand" href="{% url 'home' %}">Sarvesh Joshi</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item"><a class="nav-link" href="https://github.com/sarveshggn">Github</a></li>
+                        <li class="nav-item"><a class="nav-link" href="https://www.linkedin.com/in/sarvesh-joshi/">LinkedIn</a></li>
+                        <li class="nav-item"><a class="nav-link" href="{% static 'B.Tech(IT)_Sarvesh Joshi_Site_Added.pdf' %}">Resume</a></li>
+                        <li class="nav-item"><a class="nav-link" href="{% url 'allblogs' %}">Blog</a></li>
+                    </ul>
+                </div>
+            </nav>
+        </header>
+
+        <main role="main">
+
+            <section class="jumbotron text-center">
+                <div class="container">
+                    <h1 class="jumbotron-heading">Hi, I'm Sarvesh!</h1>
+                    <h6>
+                        <p class="typewrite" data-period="300" data-type='[ "Django Developer.", "Python Developer.", "Backend Developer.", "Data Science Enthusiast.", "Web Scraping for fun."]'>
+                    </h6>
+                    <p class="lead">Hey, my name is Sarvesh Joshi and I am a Django web developer. Currently, I am pursuing my B Tech at University School of Information, Communication and Technology (<a href="http://ipu.ac.in/usict/">USICT</a>) in Information Technology.</p>
+                    <p>
+                        <a href="mailto:sarveshggn@gmail.com" class="btn btn-primary my-2">Email</a>
+                    </p>
+                    <img src="{% static '20200219141423_IMG_5657 (4).jpg' %}" height="400" width="300" class="rotate270" alt="My Pic" style="box-shadow: 0px 10px 50px rgba(0, 0, 0, 0.7);">
+                </div>
+            </section>
+
+            <div class="album py-5 bg-light">
+                <div class="container">
+                    <!-- <h3>Web Devepotment</h3> -->
+                    <!-- <a class="btn btn-primary my-2">Web Devepotment</a> -->
+                    <!-- <div class="choice-buttons"> -->
+                        <div class="text-center" >
+                            <a href="{% url 'home' %}" class="btn btn-outline-dark">🌐 Web Development</a>
+                            <a href="{% url 'dspro' %}" class="btn btn-outline-dark"><i class="fa fa-line-chart"></i>    Data Science</a>
+                        </div>
+                    <!-- </div> -->
+                    <hr style="border-width: 2px; padding-bottom: 6px;">
+                    <div class="row">
+                        {% for dsproject in dsprojects.all reversed %}
+
+                            <div class="col-md-4">
+                                <div class="card mb-4 flex-box-top">
+                                    <img class="card-img-top" src="{{ dsproject.image.url }}" />
+                                    <div class="card-body">
+                                        <p class="card-text">{{ dsproject.summary }}</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                        {% endfor %}
+                    </div>
+                </div>
+            </div>
+
+        </main>
+
+        <footer class="text-muted">
+            <div class="container text-center">
+                <p style="color: #fff;">© Sarvesh Joshi {% now "Y" %}</p>
+            </div>
+            <!-- <hr style="color: bisque;"> -->
+            <div class="container text-center">
+                <a href="{% url 'dspro' %}">Top    </a>
+                -- <a href="mailto:sarveshggn@gmail.com">Contact</a>
+            </div>
+
+            <div class="social" style="float: right; padding-right: 46%; padding-top: 20px;"> 
+                <div class="websure-social minimal">
+                    <div class="websure-social-inner">
+                        <div class="social-img-wrp websure-socialink prk_bordered websure-linkedin">
+                            <a href="https://www.linkedin.com/in/sarvesh-joshi/" target="_blank">
+                            <span class="websure-linkedin fa fa-linkedin"></span>
+                            <span class="bg-shifter"><i class="fa fa-linkedin"></i></span>
+                            </a>
+                        </div>
+                        <div class="social-img-wrp websure-socialink prk_bordered websure-github">
+                            <a href="https://github.com/sarveshggn" target="_blank">
+                            <span class="websure-facebook fa fa-github"></span>
+                            <span class="bg-shifter"><i class="fa fa-github"></i></span>
+                            </a>
+                        </div>
+                        <div class="social-img-wrp websure-socialink prk_bordered websure-instagram">
+                            <a href="https://www.instagram.com/_sarveshjoshi__/" target="_blank">
+                            <span class="websure-instagram fa fa-instagram"></span>
+                            <span class="bg-shifter"><i class="fa fa-instagram"></i></span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            <!-- <div class="container text-center">
+                <p>Time: {% now "h:m:s" %}</p>
+            </div> -->
+        </footer>
+        
+
+        <!-- Bootstrap core JavaScript
+        ================================================== -->
+        <!-- Placed at the end of the document so the pages load faster -->
+        <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>  
+        <!-- Local Js -->
+        <script src="{% static 'js/typewrite.js' %}"></script>
+    </body>
+</html>

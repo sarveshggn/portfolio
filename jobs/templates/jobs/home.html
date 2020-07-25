@@ -64,7 +64,15 @@
 
             <div class="album py-5 bg-light">
                 <div class="container">
-
+                    <!-- <h3>Web Devepotment</h3> -->
+                    <!-- <a class="btn btn-primary my-2">Web Devepotment</a> -->
+                    <!-- <div class="choice-buttons"> -->
+                        <div class="text-center" >
+                            <a href="{% url 'home' %}" class="btn btn-outline-dark">🌐 Web Development</a>
+                            <a href="{% url 'dspro' %}" class="btn btn-outline-dark"><i class="fa fa-line-chart"></i>    Data Science</a>
+                        </div>
+                    <!-- </div> -->
+                    <hr style="border-width: 2px; padding-bottom: 6px;">
                     <div class="row">
                         {% for job in jobs.all reversed %}
 
@@ -89,7 +97,12 @@
                 <p style="color: #fff;">© Sarvesh Joshi {% now "Y" %}</p>
             </div>
 
-            <div class="social" style="float: right; padding-right: 46%;"> 
+            <div class="container text-center">
+                <a href="{% url 'home' %}">Top    </a>
+                -- <a href="mailto:sarveshggn@gmail.com">Contact</a>
+            </div>
+
+            <div class="social" style="float: right; padding-right: 45.85%; padding-top: 20px;"> 
                 <div class="websure-social minimal">
                     <div class="websure-social-inner">
                         <div class="social-img-wrp websure-socialink prk_bordered websure-linkedin">
@@ -112,9 +125,9 @@
                         </div>
                     </div>
                 </div>
-            <!-- <div class="container text-right">
-                <p>Time: {% now "h:m:s" %}</p>
-            </div> -->
+            </div>
+            
+            
         </footer>
         
 
