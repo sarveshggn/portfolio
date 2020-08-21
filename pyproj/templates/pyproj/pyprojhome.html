@@ -82,15 +82,15 @@
                     <!-- </div> -->
                     <hr style="border-width: 2px; padding-bottom: 6px;">
                     <div class="row">
-                        {% for dsproject in dsprojects.all reversed %}
+                        {% for pyproject in pyprojects.all reversed %}
 
                             <div class="col-md-4">
                                 <div class="card mb-4 flex-box-top">
-                                    <img class="card-img-top" src="{{ dsproject.image.url }}" />
+                                    <img class="card-img-top" src="{{ pyproject.image.url }}" />
                                     <div class="card-body">
-                                        <p class="card-text">{{ dsproject.summary }}</p>
+                                        <p class="card-text">{{ pyproject.summary }}</p>
                                         <div class="text-center">
-                                            <a href="{{ dsproject.github_link }}" class="btn btn-dark"><i class="fa fa-github"></i> GitHub</a>
+                                            <a href="{{ pyproject.github_link }}" class="btn btn-dark"><i class="fa fa-github"></i> GitHub</a>
                                         </div>
                                     </div>
                                 </div>
@@ -115,7 +115,7 @@
             </div>
             <!-- <hr style="color: bisque;"> -->
             <div class="container text-center">
-                <a href="{% url 'dspro' %}">Top    </a>
+                <a href="{% url 'pypro' %}">Top    </a>
                 -- <a href="mailto:sarveshggn@gmail.com">Contact</a>
             </div>
 
